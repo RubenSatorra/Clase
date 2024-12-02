@@ -7,6 +7,6 @@ HUD/Interface: Univers, Linotype
 
 PS2 Graphic Novels: Verdana, Monotype
 
-XBOX Graphic Novels: Corpus Gothic, T-26
+XBOX Graphic Novels: Corpus Gothic, T-26 // Not sure about this one
 
 + Max Payne 1 & 2 • (Main menu): Trump Gothic Pro by Canada Type
