@@ -19,14 +19,14 @@
 			/*---------------------- HEADER --------------------*/
 			
 			header{
-				display:flex;
-				justify-content: space-around;
-				color:red;
-				align-items: center;
-				background-color: black;
-				font-family: "machinemedium";
 				min-height: 100px;
 				font-size: 100px;
+				color:red;
+				background-color: black;
+				font-family: "machinemedium";
+				display:flex;
+				justify-content: space-around;
+				align-items: center;
 			}
 			
 			/*---------------------- MAIN y SECCIONES --------------------*/
@@ -41,15 +41,15 @@
 			
 			/*---------------------- NAV y botones --------------------*/
 			nav{
+				font-size: 30px;
 				min-height: 50px;
+				font-family: "trumpgothic";
+				background-image: url("assets/fondonav.jpg");
 				background-color: grey;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-around;
 				align-items: center;
-				font-family: "trumpgothic";
-				font-size: 30px;
-				background-image: url("assets/fondonav.jpg");
 			}
 			.boton{
 				margin:5px;
@@ -61,8 +61,8 @@
 			
 			/*-------------- PRESENTACION: foto y texto -----------------*/
 			#presentacion{
-				display: flex;
 				font-family: "machinemedium";
+				display: flex;
 				flex-flow: row;
 			}
 			#foto{
@@ -70,15 +70,15 @@
 				width: 50%;
 				min-height: 50%;
 				min-height: 450px;
-				background-size:cover;
 				color: red;
+				background-size:cover;
 				background-position: center;
 	
 			}
 			#text{
+				width: 50%;
 				font-family: "verdana";
 				color: white;
-				width: 50%;
 				background-color: black;
 				justify-content: center;
 
@@ -86,11 +86,12 @@
 			
 			/*------------------ PORTAFOLIO: fotos ----------------------*/
 			#portafolio div{
+				background-color: black;
 				display: flex;
 				flex-direction: row;
 				flex-wrap: wrap;
 				justify-content: space-evenly;
-				background-color: black;
+				align-items: center;
 
 			}
 			.fotos img{
@@ -105,12 +106,12 @@
 			/*---------------------- CONTACTO --------------------*/
 			#contacto form{
 				width:100%;
+				padding: 1px;
 				display: flex;
 				flex-wrap: wrap;
 				flex-direction: row;
 				align-items: center;
 				justify-content: space-between;
-				padding: 1px;
 				justify-content: center;
 			}
 			div~div{
@@ -124,7 +125,6 @@
 				background-image: url(assets/fondo.jpg);
 				background-size:cover;
 				background-position: center;
-				
 				display: flex;
 				flex-direction: row;
 				justify-content: center;
@@ -152,12 +152,12 @@
 			/*---------------------- FOOTER --------------------*/
 			footer{
 				background-color: black;
-				height: 50px;
+				height: 80px;
+				bottom: 0px;
+				width: 100%;
 				color: white;
 				display: flex;
 				position: sticky;
-				bottom: 0px;
-				width: 100%;
 			}
 			footer div{
 				margin:5px;
@@ -166,11 +166,78 @@
 				margin: 0 auto;
 				align-self: center;
 			}
-			#insta,#www{
-				display:flex;
-				align-self: flex-end;
+			
+			.card {
+				width: fit-content;
+				height: fit-content;
+				background-color: black;
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
 			}
 			
+			/* for all social containers*/
+			.socialContainer {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				background-color: rgb(44, 44, 44);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				transition-duration: .3s;
+			}
+			/* instagram*/
+			.containerOne:hover {
+				background-color: #d62976;
+				transition-duration: .3s;
+			}
+			/* twitter*/
+			.containerTwo:hover {
+				background-color: #00acee;
+				transition-duration: .3s;
+			}
+			/* linkdin*/
+			.containerThree:hover {
+				background-color: #0072b1;
+				transition-duration: .3s;
+			}
+			/* Whatsapp*/
+			.containerFour:hover {
+				background-color: #128C7E;
+				transition-duration: .3s;
+			}
+			
+			.socialContainer:active {
+				transform: scale(0.9);
+				transition-duration: .3s;
+			}
+			
+			.socialSvg {
+				width: 17px;
+			}
+			
+			.socialSvg path {
+				fill: rgb(255, 255, 255);
+			}
+			
+			.socialContainer:hover .socialSvg {
+				animation: slide-in-top 0.3s both;
+			}
+			
+			@keyframes slide-in-top {
+				0% {
+			transform: translateY(-50px);
+			opacity: 0;
+				}
+			
+				100% {
+			transform: translateY(0);
+			opacity: 1;
+				}
+			}
 			/*
 				NOTA: si metemos a todos los hijos en una clase: "iconos" por ej.
 				Los sucesivos hijos seran:  .iconos:nth-child(1), ...(2), ...etc
